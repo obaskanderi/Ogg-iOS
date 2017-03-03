@@ -9,3 +9,4 @@ Pod::Spec.new do |spec|
   spec.requires_arc = true
   spec.license = { :type => "MIT", :file => "LICENSE" }
   spec.vendored_frameworks = "ogg.framework"
+end
