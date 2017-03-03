@@ -21,9 +21,9 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		DA7AD2AC1E69CB9000BE588E /* config_types.h in Headers */ = {isa = PBXBuildFile; fileRef = DA7AD2A71E69CB9000BE588E /* config_types.h */; };
-		DA7AD2AD1E69CB9000BE588E /* ogg.h in Headers */ = {isa = PBXBuildFile; fileRef = DA7AD2A81E69CB9000BE588E /* ogg.h */; };
-		DA7AD2AE1E69CB9000BE588E /* os_types.h in Headers */ = {isa = PBXBuildFile; fileRef = DA7AD2A91E69CB9000BE588E /* os_types.h */; };
+		DA7AD2AC1E69CB9000BE588E /* config_types.h in Headers */ = {isa = PBXBuildFile; fileRef = DA7AD2A71E69CB9000BE588E /* config_types.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DA7AD2AD1E69CB9000BE588E /* ogg.h in Headers */ = {isa = PBXBuildFile; fileRef = DA7AD2A81E69CB9000BE588E /* ogg.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DA7AD2AE1E69CB9000BE588E /* os_types.h in Headers */ = {isa = PBXBuildFile; fileRef = DA7AD2A91E69CB9000BE588E /* os_types.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DA7AD2AF1E69CB9000BE588E /* libogg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA7AD2AB1E69CB9000BE588E /* libogg.a */; };
 /* End PBXBuildFile section */
 
@@ -153,7 +153,7 @@
 				TargetAttributes = {
 					DA7AD2981E69CB4500BE588E = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = DQ356LPHQ2;
+						DevelopmentTeam = 7TVX6SXZ4T;
 						ProvisioningStyle = Automatic;
 					};
 					DA7AD2B81E69D01C00BE588E = {
@@ -222,6 +222,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -275,6 +276,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -320,12 +322,17 @@
 		DA7AD2A21E69CB4500BE588E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = DQ356LPHQ2;
+				DEVELOPMENT_TEAM = 7TVX6SXZ4T;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ogg/dependencies/lib",
+				);
 				INFOPLIST_FILE = ogg/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -333,6 +340,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/ogg/dependencies/lib",
 				);
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.ogg-codes.org";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -343,12 +351,17 @@
 		DA7AD2A31E69CB4500BE588E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = DQ356LPHQ2;
+				DEVELOPMENT_TEAM = 7TVX6SXZ4T;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ogg/dependencies/lib",
+				);
 				INFOPLIST_FILE = ogg/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -356,6 +369,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/ogg/dependencies/lib",
 				);
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.ogg-codes.org";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -398,6 +412,7 @@
 				DA7AD2A31E69CB4500BE588E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DA7AD2B91E69D01C00BE588E /* Build configuration list for PBXAggregateTarget "UniversalTarget" */ = {
 			isa = XCConfigurationList;
@@ -406,6 +421,7 @@
 				DA7AD2BB1E69D01C00BE588E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
