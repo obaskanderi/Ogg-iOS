@@ -22,8 +22,8 @@ extern "C" {
 #endif
 
 #include <stddef.h>
-#include <ogg/os_types.h>
-#include <ogg/config_types.h>
+#include "os_types.h"
+#include "config_types.h"
 
 typedef struct {
   void *iov_base;
